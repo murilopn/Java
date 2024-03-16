@@ -1,0 +1,50 @@
+FUNCIONAMENTO DA LINGUAGEM JAVA
+
+No C, nós escrevemos o código fonte, mandamos para o compilador, que torna ele em código exectuável para a máquina, ou seja,
+traduz a linguagem pra linguagem binária. Em Java, o compilador (JavaC) traduz pra Bytecode, ou seja, o código 
+gerado por um compilador Java não é código executável. O Bytecode é enviado para a Java Virtual Machine (JVM) e aí
+sim torna ele executável. Bom, esse software (JVM) foi adicionado na jogada, pois, em C, por exemplo, nós temos um
+compilador para cada sistema operacional (SI), já no Java, eu crio o mesmo código (bytecode) e aí sim, eu mando pra
+JVM, sendo que é a JVM que é diferente de acordo com o sistema operacional. Ou seja, eu compilo uma vez e funciona 
+em múltiplos sistemas. O nome desse mecanismo/ideia é WORA - write once run anywhere
+
+Estrutura JVM:
+. Loder/Verificador - Parte interna da JVM que vai carregar o bytecode na sua VM, já o verificador checa se esse código pode ser rodado
+. Interpretador/Gerador - Pega o bytecode e traduz pra linguagem de máquina e o gerador vai tratar como os códigos/variáveis vão se organizar na memória da JVM
+. Compilador JIT (Just In Time) - Consegue compreender as partes mais importantes do seu código e compila ali mesmo na máquina virtual (antes do Interpretador) 
+
+obs: A JVM é como se fosse um computador, então tem memória própria.
+
+Estrtura Java Tools:
+.JavaC
+.Debugger
+.APIs
+
+Siglas importantes:
+JRE (Java Runtime Environment)- Quem quer usar o Java
+    Composto pela:
+        - JVM
+        - Bibliotecas
+
+JDK (Java Devolopment Kit)- Quem quer desenvolver pra Java
+    Composto pela:
+    -JRE
+    -Java Lang
+    -Java Tools
+
+ATENÇÃO:
+Compilador - código fonte em código objeto (linguagem de máquina) - Passa por 2 processos.
+interpretador - transforma código fonte em código exectuável pelo SI (etapa final)
+Sendo assim, eles diferem na forma a qual o código fonte é traduzido para executável. O compilador checa antes os comandos, procura alguma inconsistênciai e só depois 
+traduz o código inteiro para linguagem de máquina e em seguida executa o código, já o interpretador traduz o código fonte linha por linha durante a própria execução.
+Ou seja, o compilador usa mais memória, mas faz em menos tempo. Por isso existe, o JIT no Java, justamente para economizar tempo.
+
+OBS:
+O processo de compilação NÃO é o compilador!!!!! Esse processo consiste em: Eu escrevo o código fonte, mando pro compilador que gera o código relocável (esse código não
+está na linguagem de máquina, ele está, na maioria das vezes, em assembly) e do compilador ele vai para o montador que aí sim escreve o executável, por isso o processo tem 2 etapas.
+
+O código relocável tem esse nome, pois eu tenho as variáveis, as instruções (o compilador apontou os erros), mas eu não tenho os endereços de alocação delas na memória, 
+por isso que depois eu vou para o MONTADOR.
+
+MONTADOR=ASSEMBLER
+assembly!=assembler
