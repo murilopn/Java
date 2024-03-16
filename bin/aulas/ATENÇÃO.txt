@@ -1,0 +1,14 @@
+
+Em Java, quando você está declarando que uma classe implementa uma interface, você apenas lista o nome da interface após a palavra-chave implements. Não há necessidade
+de adicionar parênteses após o nome da interface. Isso ocorre porque o implements é uma palavra-chave que indica que a classe está aderindo a um contrato definido pela 
+interface, e não está invocando um construtor ou método,ex:
+
+public class GUI implements ActionListener {
+   // Corpo da classe
+}
+REPARE QUE NÃO HÁ PARÊNTESES NO ACTIONLISTENER
+
+
+Se você incluir parênteses após o nome da interface, o compilador interpretará isso como uma tentativa de chamar 
+um construtor da interface ActionListener, o que não é permitido, pois as interfaces em Java não podem ser instanciadas diretamente. Isso resultará em um erro de sintaxe, 
+como o que você encontrou.

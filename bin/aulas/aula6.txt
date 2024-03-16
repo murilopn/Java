@@ -1,0 +1,49 @@
+TIPOS PRIMITIVOS E MANIPULAÇÃO DE DADOS (entrada e saída)
+
+-Vale ressaltar que Java é uma linguagem fortemente tipada, ou seja, é bom fazer especificação na hora de fazer uma conversão entre tipos
+boa maneira para especificar tipos de valores específicos: TYPECAST, assim como em C, ex:
+int idade = (int) 3;
+No Java, ainda é possível transformar essa variável em um objeto:
+Integer idade = new Integer (3); - é importante perceber que eu sempre uso uma classe pra REFERENCIAR esse novo objeto. Integer não é um tipo, é uma classe (começa com maiúsculo), uma vez que idade não é variável
+e sim objeto. Sendo assim, está dizendo que o valor 3 vai ser considerado inteiro e será colocado dentro do objeto idade. O nome dado a essa classe (Integer) é Wrapper Class. Wrapper é invólucro, ou seja, estou
+
+Cada tipo (bool, int, float e char) representam uma família no java, sendo que é possível existir subfamílias
+
+No Java, temos que saber trabalhar com a memória para fazer um app, pois dependendo do dispositivo, devemos seguir um caminho diferente, por ex: Fazer um app pra relógio.
+
+OBS: No Java, nós não temos tipo String, apenas classe String, ou seja, sempre precisarmos escrever mais de uma letra (vulgo uma palavra), teremos que fazer criar um objeto.
+
+IMAGEM COM OS TIPOS: file:///home/user/Pictures/Screenshots/IMPORTANTE%20-%20mem%C3%B3ria%20ocupada%20por%20tipo.png 
+
+Alguns tipos de print:
+print 
+println
+format (mesma saída do printf)
+printf - é o mais formatadinho, ex:
+float nota = 8.5f;
+System.output.printf("A nota é %.2f\n", nota);
+
+ENTRADA DE DADOS:
+No Java, devemos importar uma clase para tratar exclusivamente da entrada de dados:
+import Java.util.Scanner; ou import Java.util.*;
+ex:
+System.output.print("Digite o nome do aluno");
+Scanner teclado = new Scanner(System.in);
+String nome = teclado.nextLine();
+System.output.print("Digite a nota do aluno");
+float nota = teclado.nextFloat();
+System.output.printf("a nota de %s foi %.1f\n", nome, nota);
+
+PARA LER UMA ENTRADA ANTERIOR EU USO O MÉTODO/OBJETO (tanto faz) nextAlgo, ex:
+nextFloat, nextInt, nextShort, nextLine (para strings), cada um referencia ao tipo da entrada
+
+Como a tipagem no Java é muito forte, isso pode gerar alguns problemas de atribuição, ex:
+int idade = 30;
+String valor = idade; VAI DAR ERRADO
+String valor = (String) idade; VAI DAR ERRADO (usando classe invólucra no typecast)
+String valor = Integer.toString(idade); forma correta, usando classe invólucra
+
+caminho contrário:
+String valor = "30";
+int idade = Integer.parseInt(valor); - parse é converter
+System.out.println(idade);

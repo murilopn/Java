@@ -1,0 +1,40 @@
+Todo programa em Java pode ser composto por pacotes.
+package <nome do programa>;
+
+O Primeiro pacote que todo programa deve ter em chave é o cabeçalho da classe:
+
+package <nome do programa>;
+public class <nome da classe> {
+}
+
+
+Dentro da classe, nós devemos criar um método, o método principal:
+package <nome do programa>;
+public class <nome da classe> {
+    public static void main (String[] args){
+    }
+}
+
+TÉCNICAS DE NOMEAÇÃO DE IDENTIFICADORES (Camel Case):
+nome do package - escrito em letra minúscula
+nome da classe - as palavras começam com letra maiúscula
+atributo/variável/método/objeto -1a letra minúscula e demais palavras começando com maiúscula
+
+obs: As vezes o método terá só um nome, o que pode confundir com o pacote, pois ambos se iniciam com letra minúscula e não terá como diferenciar, pela
+ausência de uma segunda palavra (começa c maiúscula no método), dado isso, basta ver se há a palavra void
+
+ex:
+package primeiroprograma;
+public class PrimeiroPrograma {
+    public static void main (String[] args){
+        System.out.print("Olá, mundo!");
+    }
+}
+
+curiosidade: Os comandos do Java são grandes, porque a linguagem abastece diferentes máquinas (relógios, pc, celular e etc), por exemplo, o print é:
+system.out.print - não dá pra generalizar com um print, por ex.
+
+NEW - quando eu uso esse comando quer dizer que estou criando um objeto.
+
+PACKAGE - nome do diretório
+CLASS - nome do arquivo

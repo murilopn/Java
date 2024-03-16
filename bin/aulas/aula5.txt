@@ -1,0 +1,35 @@
+biblioteca java.applet - já vem no sistema padrão, não precisa dar import
+
+Pacote Swing:
+Permite que crie interfaces gráficas
+import javax.swing 
+
+No no diretório src, no arquivo MainFrame, eu peguei um código e comentei MUITO
+sobre o Swing, vale a pena revisar várias vezes.
+
+Alguns conceitos a mais de orientação a objetos:
+Herança - "extends"
+ex:
+public class TelaSwing extends javax.swing.JFrame {
+}
+A Classe pública TelaSwing tem como herança javax.swing.JFrame, o conceito é o realmente
+de herança, ou seja, tudo que o JFrame tem, ele vai passar pra classe. Isso é MUITO
+útil, pois eu não precisa ficar passando comando por comando, eu passo o JFrame todo
+
+public class TelaSwing extends javax.swing.JFrame {
+    private javax.swing.JButton btnClick; 
+}
+btnClick é o nome de um JButton que é do tipo Swing
+
+ENCAPSULAMENTO - é o ato de tornar o objeto de public para private
+
+JavaFX:
+É a evolução do Swing, uma vez que o Swing só cria interfaces para as janelas. Já o
+JavaFX cria uma interface pra tudo e ele pode rodar em diferentes aparelhos.
+
+Comando "implements", ex:
+import javafx.fxml.FXML;
+public class FXMLDocumentController implements Initializable {
+}
+Implements remete a um conceito de OO que diz respeito à interfaces, oo seja, sempre que aparecer
+a palavra "implements", ele está fazendo uma interface
